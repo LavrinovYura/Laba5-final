@@ -23,7 +23,7 @@ BinHeap* createMyHeap() {
 }
 
 BinHeap* createEmptyHeap() {
-	BinHeap* tmp = NULL;
+	BinHeap* tmp;
 	tmp = (BinHeap*)malloc(sizeof(BinHeap));
 	tmp->data = NULL;
 	tmp->size = 0;

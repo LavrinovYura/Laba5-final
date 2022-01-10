@@ -5,15 +5,10 @@
 
 void read(FILE* file, BinHeap* arr) {
     fseek(file, 0, SEEK_SET);
-    int count = 0;
-    int* mass = (int*)malloc(sizeof(int));
     while (!feof(file)) {
         int value;
         if (fscanf(file, "%d", &value) == 1) {
-            mass[count] = value;
             insert(arr, value);
-            ++count;
-            mass = (int*)realloc(mass, (count) * sizeof(int));
         }
     }
 }

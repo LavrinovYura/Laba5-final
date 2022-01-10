@@ -6,7 +6,12 @@
 #include "heap.h"
 
 void test() {
-    BinHeap* arr= createMyHeap();
+    int size = 10;
+    BinHeap* arr = createEmptyHeap();
+    for (int i = 0; i < size; ++i) {
+       insert(arr, rand() % 20);
+    }
+    
     int flag =0;
     printf("Creating Heap---------------- \n");
     printHeap(arr);
